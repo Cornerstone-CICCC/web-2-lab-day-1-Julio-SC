@@ -1,0 +1,107 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/day.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+  }
+  
+  body.night {
+    background: url('images/night.jpg') no-repeat center center/cover;
+  }
+  
+  h1, h2, h3, p {
+    margin: 10px 0;
+    font-weight: 100;
+  }
+  
+ p {
+    color: #000;
+    font-weight: bold;
+ }
+
+ span {
+    color: #000000;
+ }
+
+  h1.title {
+    font-size: 2rem;
+    color: #000; /* Color más oscuro para el modo diurno */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Sombra clara */
+  }
+  
+  body.night h1.title {
+    color: #fff; /* Color más claro para el modo nocturno */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra oscura */
+  }
+  
+  .container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .container input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .results {
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .results h2, .results p {
+    font-size: 1rem;
+  }
+  
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .container input {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  
+    .container button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .results {
+      padding: 15px;
+    }
+  
+    .results h2, .results p {
+      font-size: 0.9rem;
+    }
+  }
+  
